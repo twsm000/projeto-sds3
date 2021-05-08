@@ -1,7 +1,7 @@
 package com.devsuperior.dsvendas.controllers;
 
 import com.devsuperior.dsvendas.dto.SellerDTO;
-import com.devsuperior.dsvendas.services.SellerServices;
+import com.devsuperior.dsvendas.services.SellerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ import java.util.List;
 public class SellerController {
 
     @Autowired
-    private SellerServices service;
+    private SellerService service;
 
     @GetMapping
     public ResponseEntity<List<SellerDTO>> findAll() {
